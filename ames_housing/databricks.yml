@@ -62,7 +62,7 @@ targets:
     mode: development
     presets:
       name_prefix: '[${bundle.target} ${workspace.current_user.short_name}] '
-      source_linked_deployment: true
+      source_linked_deployment: false
       trigger_pause_status: PAUSED
       jobs_max_concurrent_runs: 1
       pipelines_development: true
@@ -76,18 +76,18 @@ targets:
         env: ${bundle.target}
     default: true
     workspace:
-      host: https://dbc-e5684c0a-20fa.cloud.databricks.com
+      host: https://e2-demo-field-eng.cloud.databricks.com
     permissions:
-      - user_name: matthew.giglia@databricks.com
+      - user_name: melissa.pang@databricks.com
         level: CAN_MANAGE
       - group_name: users
         level: CAN_VIEW
     variables:
-      catalog: main
+      catalog: melissap
       schema: ames_housing
       ml_model_name: house_price_prediction
       notifications: []
-      run_as_user: matthew.giglia@databricks.com
+      run_as_user: melissa.pang@databricks.com
       run_as_user_permissions: ["CAN_MANAGE", "CAN_RUN", "CAN_MANAGE_RUN"]
       user_permissions: ["CAN_READ", "CAN_VIEW"]
 
